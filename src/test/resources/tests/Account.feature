@@ -15,7 +15,7 @@ Feature: Account statement
   @regression
   Scenario: Statement includes account details
     Then statement includes "Name: Bob Smith"
-    * statement includes "Account: 12345678"
+    Then statement includes "Account: 12345678"
 
   @regression
   Scenario: Balance is calculated on the statement

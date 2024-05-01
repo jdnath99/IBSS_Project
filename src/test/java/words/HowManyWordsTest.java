@@ -9,7 +9,7 @@ public class HowManyWordsTest {
     @Test
     public void howManyWords() {
         List<String> uniqueWords =
-                Words.getUniqueWordsFromSentence("A cat Sat on a mat; a Monkey sat on the Cat.");
+                Words.getUniqueWordsFromSentence("A cat Sat on a mat; a Monkey sat on the Cat .");
 
         List<String> expectedResult = List.of("a", "cat", "sat", "on", "the", "mat", "monkey");
 

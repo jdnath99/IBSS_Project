@@ -13,10 +13,18 @@ Use git branches during development. i.e. a feature branch for each exercise and
 
 You will need to define a path for 'webdriver.chrome.driver' using a system property passed in the IDE run configuration
 and the CLI when executing via maven goal.
+i.e. Use -Dwebdriver.chrome.driver=path/to/driver on the CLI as the tests shouldn't have the
+driver hardcoded.
 
 You should consider logging of some description.
 
+It should be obvious that the main 'application' code should be generic work with examples other than specified in
+the tests.
+
 Executing 'mvn test' should succeed.
+mvn test -Dwebdriver.chrome.driver=path/to/chromedriver -Dcucumber.filter.tags="@regression"
+
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
 
 Exercises:
 
@@ -36,3 +44,5 @@ You will need to pass in the path to a chrome driver.
 functionality. It can be assumed there are a few rules that the new password must comply with. You must specify the
 current username and password before being allowed to enter a new password and confirm the new password by re-typing
 the same. You DO NOT need to implement any steps.
+See example change password screen. ExampleChangePasswordScreen.PNG
+You may assume that the change password has been initiated.

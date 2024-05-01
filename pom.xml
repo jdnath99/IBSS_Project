@@ -30,6 +30,14 @@
             <artifactId>cucumber-junit</artifactId>
             <version>7.5.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.9.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>

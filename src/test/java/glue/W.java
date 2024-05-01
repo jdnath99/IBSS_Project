@@ -1,5 +1,6 @@
 package glue;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,11 +19,18 @@ public class W {
     protected WebDriver driver;
 
     private W() {
-        String pathToDriver = System.getProperty("webdriver.chrome.driver");
+
+        //ChromeDriver version is 114 and browser version is 126 which is not compatible.
+       /* String dir = System.getProperty("user.dir");
+        String pathToDriver = dir + "\\chromedriver.exe";
         if (pathToDriver == null || pathToDriver.isEmpty()) {
             throw new RuntimeException("define a path to the chrome driver using system property 'webdriver.chrome.driver'");
         }
-        System.setProperty("webdriver.chrome.driver", pathToDriver);
+        System.setProperty("webdriver.chrome.driver", pathToDriver);*/
+
+        //Added Webdriver manager
+
+        WebDriverManager.chromedriver().setup();
 
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
